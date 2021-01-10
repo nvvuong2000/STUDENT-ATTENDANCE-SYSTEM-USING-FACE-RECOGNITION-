@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "justadudewhohacks",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "request": "^2.88.2",
+    "url": "^0.11.0",
+    "util": "^0.12.3"
+  },
+  "proxy": "http://localhost:4000/"
+}

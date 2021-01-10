@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="assets\images\favicon.ico">
+
+  <!-- plugin css -->
+  <link href="assets\libs\jquery-vectormap\jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+
+  <!-- App css -->
+  <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
+  <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
+  <script src="face-api.js"></script>
+  <script src="js/commons.js"></script>
+  <script src="js/faceDetectionControls.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css"> -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+  
+   <!-- Begin page -->
+   <div id="wrapper">
+
+     <!-- Topbar Start -->
+     <div class="navbar-custom">
+      <ul class="list-unstyled topnav-menu float-right mb-0">
+
+        <li class="d-none d-sm-block">
+          <form class="app-search">
+            <div class="app-search-box">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <button class="btn" type="submit">
+                    <i class="fe-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </li>
+
+        <li class="dropdown d-none d-lg-block">
+          <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+            role="button" aria-haspopup="false" aria-expanded="false">
+            <img src="assets\images\flags\us.jpg" alt="user-image" class="mr-1" height="12"> <span
+              class="align-middle">English <i class="mdi mdi-chevron-down"></i> </span>
+          </a>
+         
+        </li>
+
+        <li class="dropdown notification-list">
+          <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
+            aria-haspopup="false" aria-expanded="false">
+            <i class="fe-bell noti-icon"></i>
+            <span class="badge badge-danger rounded-circle noti-icon-badge">4</span>
+          </a>
+        
+        </li>
+
+        <li class="dropdown notification-list">
+          <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+            role="button" aria-haspopup="false" aria-expanded="false">
+            <img src="assets\images\users\avatar-1.jpg" alt="user-image" class="rounded-circle">
+            <span class="pro-user-name ml-1">
+              Nik Patel <i class="mdi mdi-chevron-down"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+            <!-- item-->
+            <div class="dropdown-header noti-title">
+              <h6 class="text-overflow m-0">Welcome !</h6>
+            </div>
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <i class="remixicon-account-circle-line"></i>
+              <span>My Account</span>
+            </a>
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <i class="remixicon-settings-3-line"></i>
+              <span>Settings</span>
+            </a>
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <i class="remixicon-wallet-line"></i>
+              <span>My Wallet <span class="badge badge-success float-right">3</span> </span>
+            </a>
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <i class="remixicon-lock-line"></i>
+              <span>Lock Screen</span>
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <i class="remixicon-logout-box-line"></i>
+              <span>Logout</span>
+            </a>
+
+          </div>
+        </li>
+
+
+        <li class="dropdown notification-list">
+          <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
+            <i class="fe-settings noti-icon"></i>
+          </a>
+        </li>
+
+
+      </ul>
+
+  
+
+
+     </div>
+     <!-- end Topbar -->
+
+     <!-- ========== Left Sidebar Start ========== -->
+     <div class="left-side-menu">
+
+       <div class="slimscroll-menu">
+
+         <!--- Sidemenu -->
+         <div id="sidebar-menu">
+
+           <ul class="metismenu" id="side-menu">
+
+             <li class="menu-title">Navigation</li>
+
+             <li>
+               <a href="javascript: void(0);" class="waves-effect">
+                 <i class="remixicon-dashboard-line"></i>
+                 <!-- <span class="badge badge-success badge-pill float-right">2</span> -->
+                 <span> Quản lí  </span>
+               </a>
+               <ul class="nav-second-level" aria-expanded="false">
+                 <li>
+                   <a href="http://localhost:4000/tables-datatables.html">Danh sách điểm danh</a>
+                 </li>
+                 <li>
+                   <a href="http://localhost:4000/charts-flot.html">Thống kê</a>
+                  
+                 </li>
+                
+               </ul>
+             </li>
+           
+
+             <li>
+               <a href="javascript: void(0);" class="waves-effect">
+                 <i class="remixicon-stack-line"></i>
+                 <span> Thêm </span>
+                 <span class="menu-arrow"></span>
+               </a>
+               <ul class="nav-second-level" aria-expanded="false">
+                 <li>
+                  <a href="http://localhost:3000/upload ">Thêm Thông Tin Sinh Viên</a>
+                 </li>
+                 </ul>
+             </li>
+             </ul>
+             </div>
+       </div>
+     </div>
+               
+         <!-- End Sidebar -->
+
+         <div class="clearfix"></div>
+
+       </div>
+       <!-- Sidebar -left -->
+
+     </div>
+     <!-- Left Sidebar End -->
+
+     <!-- ============================================================== -->
+     <!-- Start Page Content here -->
+     <!-- ============================================================== -->
+
+     <div class="content-page">
+       <div class="content">
+
+         <!-- Start Content-->
+         <div class="container-fluid">
+
+           <!-- start page title -->
+           <div class="row">
+             <div class="col-12">
+               <div class="page-title-box">
+                 <div class="page-title-right">
+                   <ol class="breadcrumb m-0">
+                     <li class="breadcrumb-item"><a href="javascript: void(0);">Điểm danh sinh viên</a></li>
+                     <li class="breadcrumb-item"><a href="javascript: void(0);">Trang chủ</a></li>
+                    
+                   </ol>
+                 </div>
+                 <h4 class="page-title">Trang chủ</h4>
+               </div>
+             </div>
+           </div>
+           <!-- end page title -->
+           <div class="row">
+             <div class="col-xl-4">
+               <div class="card-box">
+                 <div class="row">
+                   <div class="col-6">
+                     <div class="avatar-sm bg-success rounded-circle">
+                       <i class="fe-aperture avatar-title font-22 text-white"></i>
+                     </div>
+                   </div>
+                   <div class="col-6">
+                     <div class="text-right">
+                       <h3 class="text-dark my-1"><span data-plugin="counterup" id="soluongsinhvien"></span></h3>
+                       <p class="text-muted mb-1 text-truncate">Số lượng sinh viên</p>
+                     </div>
+                   </div>
+                 </div>
+
+               </div> <!-- end card-box-->
+             </div> <!-- end col -->
+
+             <div class="col-xl-4">
+               <div class="card-box">
+                 <div class="row">
+                   <div class="col-6">
+                     <div class="avatar-sm bg-primary rounded-circle">
+                       <i class="fe-users avatar-title font-22 text-white"></i>
+                     </div>
+                   </div>
+                   <div class="col-6">
+                     <div class="text-right">
+                       <h3 class="text-dark my-1"><span data-plugin="counterup" id="davaolop"></span></h3>
+                       <p class="text-muted mb-1 text-truncate">Đã vào lớp</p>
+                     </div>
+                   </div>
+                 </div>
+
+               
+               </div> <!-- end card-box-->
+             </div> <!-- end col -->
+
+             <div class="col-xl-4">
+               <div class="card-box">
+                 <div class="row">
+                   <div class="col-6">
+                     <div class="avatar-sm bg-secondary rounded-circle">
+                       <i class="fe-shopping-bag avatar-title font-22 text-white"></i>
+                     </div>
+                   </div>
+                   <div class="col-6">
+                     <div class="text-right">
+                       <h3 class="text-dark my-1"><span data-plugin="counterup" id="chuavaolop">367</span></h3>
+                       <p class="text-muted mb-1 text-truncate">Chưa vào lớp</p>
+                     </div>
+                   </div>
+                 </div>
+
+               
+               </div> <!-- end card-box-->
+             </div> <!-- end col -->
+
+           </div>
+           <!-- end row -->
+
+
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="card">
+            <div class="card-body">
+               <div id="navbar"></div>
+              
+
+
+                <div style="position: relative" >
+                  <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay="" muted="" playsinline="" style="margin: auto;
+    display: block"></video>
+                  <canvas id="overlay">
+                  </canvas>
+                  </div>
+                  </div>
+                
+
+             
+          </div> <!-- end card-->
+        </div>
+        <div class="col-lg-5">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-widgets">
+                <a href="javascript: void(0);" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
+                <a data-toggle="collapse" href="#cardCollpase5" role="button" aria-expanded="true"
+                  aria-controls="cardCollpase5" class=""><i class="mdi mdi-minus"></i></a>
+                <a href="javascript: void(0);" data-toggle="remove"><i class="mdi mdi-close"></i></a>
+              </div>
+              <h4 class="header-title mb-0">Top Selling Products</h4>
+
+              <div id="cardCollpase5" class="pt-3 collapse show">
+                <div class="table-responsive">
+                  <table class="table table-hover table-centered mb-0">
+                    <thead>
+                      <tr>
+                        <th>STT</th>
+                        <th>MSSV</th>
+                        <th>Họ Tên</th>
+                        <th>Thời gian vào lớp</th>
+                        <th>Trạng thái</th>
+                      </tr>
+                    </thead>
+                    <tbody id="listStuds">
+                      <tr>
+                        <td>ASOS Ridley High Waist</td>
+                        <td>$79.49</td>
+                        <td>82</td>
+                        <td>$6,518.18</td>
+                      </tr>
+                      <tr>
+                        <td>Marco Lightweight Shirt</td>
+                        <td>$128.50</td>
+                        <td>37</td>
+                        <td>$4,754.50</td>
+                      </tr>
+                      <tr>
+                        <td>Half Sleeve Shirt</td>
+                        <td>$39.99</td>
+                        <td>64</td>
+                        <td>$2,559.36</td>
+                      </tr>
+                      <tr>
+                        <td>Lightweight Jacket</td>
+                        <td>$20.00</td>
+                        <td>184</td>
+                        <td>$3,680.00</td>
+                      </tr>
+                      <tr>
+                        <td>Marco Shoes</td>
+                        <td>$28.49</td>
+                        <td>69</td>
+                        <td>$1,965.81</td>
+                      </tr>
+                      <tr>
+                        <td>ASOS Ridley High Waist</td>
+                        <td>$79.49</td>
+                        <td>82</td>
+                        <td>$6,518.18</td>
+                      </tr>
+                      <tr>
+                        <td>Half Sleeve Shirt</td>
+                        <td>$39.99</td>
+                        <td>64</td>
+                        <td>$2,559.36</td>
+                      </tr>
+                      <tr>
+                        <td>Lightweight Jacket</td>
+                        <td>$20.00</td>
+                        <td>184</td>
+                        <td>$3,680.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> <!-- end table responsive-->
+              </div> <!-- collapsed end -->
+            </div> <!-- end card-body -->
+          </div> <!-- end card-->
+        </div>
+      </div>
+           <!-- end row -->
+
+         </div> <!-- container -->
+
+       </div> <!-- content -->
+
+       <!-- Footer Start -->
+       <footer class="footer">
+         <div class="container-fluid">
+           <div class="row">
+             <div class="col-md-6">
+               2016 - 2019 &copy; Minton theme by <a href="">Coderthemes</a>
+             </div>
+             <div class="col-md-6">
+               <div class="text-md-right footer-links d-none d-sm-block">
+                 <a href="javascript:void(0);">About Us</a>
+                 <a href="javascript:void(0);">Help</a>
+                 <a href="javascript:void(0);">Contact Us</a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </footer>
+       <!-- end Footer -->
+
+     </div>
+
+     <!-- ============================================================== -->
+     <!-- End Page content -->
+     <!-- ============================================================== -->
+
+
+   </div>
+   <!-- END wrapper -->
+
+   <!-- Right Sidebar -->
+   <div class="right-bar">
+     <div class="rightbar-title">
+       <a href="javascript:void(0);" class="right-bar-toggle float-right">
+         <i class="fe-x noti-icon"></i>
+       </a>
+       <h4 class="m-0 text-white">Settings</h4>
+     </div>
+     <div class="slimscroll-menu">
+       <!-- User box -->
+       <div class="user-box">
+         <div class="user-img">
+           <img src="assets\images\users\avatar-1.jpg" alt="user-img" title="Mat Helme"
+             class="rounded-circle img-fluid">
+           <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
+         </div>
+
+         <h5><a href="javascript: void(0);">Nik G. Patel</a> </h5>
+         <p class="text-muted mb-0"><small>Admin Head</small></p>
+       </div>
+
+       <ul class="nav nav-pills bg-light nav-justified">
+         <li class="nav-item">
+           <a href="#home1" data-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
+             General
+           </a>
+         </li>
+         <li class="nav-item">
+           <a href="#messages1" data-toggle="tab" aria-expanded="false" class="nav-link rounded-0 active">
+             Chat
+           </a>
+         </li>
+       </ul>
+       <div class="tab-content pl-3 pr-3">
+         <div class="tab-pane" id="home1">
+           <div class="row mb-2">
+             <div class="col">
+               <h5 class="m-0 font-15">Notifications</h5>
+               <p class="text-muted"><small>Do you need them?</small></p>
+             </div> <!-- end col-->
+             <div class="col-auto">
+               <div class="custom-control custom-switch mb-2">
+                 <input type="checkbox" class="custom-control-input" id="tabswitch1">
+                 <label class="custom-control-label" for="tabswitch1"></label>
+               </div>
+             </div> <!-- end col -->
+           </div>
+           <!-- end row-->
+
+           <div class="row mb-2">
+             <div class="col">
+               <h5 class="m-0 font-15">API Access</h5>
+               <p class="text-muted"><small>Enable/Disable access</small></p>
+             </div> <!-- end col-->
+             <div class="col-auto">
+               <div class="custom-control custom-switch mb-2">
+                 <input type="checkbox" class="custom-control-input" checked="" id="tabswitch2">
+                 <label class="custom-control-label" for="tabswitch2"></label>
+               </div>
+             </div> <!-- end col -->
+           </div>
+           <!-- end row-->
+
+           <div class="row mb-2">
+             <div class="col">
+               <h5 class="m-0 font-15">Auto Updates</h5>
+               <p class="text-muted"><small>Keep up to date</small></p>
+             </div> <!-- end col-->
+             <div class="col-auto">
+               <div class="custom-control custom-switch mb-2">
+                 <input type="checkbox" class="custom-control-input" id="tabswitch3">
+                 <label class="custom-control-label" for="tabswitch3"></label>
+               </div>
+             </div> <!-- end col -->
+           </div>
+           <!-- end row-->
+
+           <div class="row mb-2">
+             <div class="col">
+               <h5 class="m-0 font-15">Online Status</h5>
+               <p class="text-muted"><small>Show your status to all</small></p>
+             </div> <!-- end col-->
+             <div class="col-auto">
+               <div class="custom-control custom-switch mb-2">
+                 <input type="checkbox" class="custom-control-input" checked="" id="tabswitch4">
+                 <label class="custom-control-label" for="tabswitch4"></label>
+               </div>
+             </div> <!-- end col -->
+           </div>
+           <!-- end row-->
+
+           <div class="alert alert-success alert-dismissible fade mt-3 show" role="alert">
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">×</span>
+             </button>
+             <h5>Unlimited Access</h5>
+             Upgrade to plan to get access to unlimited reports
+             <br>
+             <a href="javascript: void(0);" class="btn btn-outline-success mt-3 btn-sm">Upgrade<i
+                 class="ml-1 mdi mdi-arrow-right"></i></a>
+           </div>
+
+         </div>
+         <div class="tab-pane show active" id="messages1">
+           <div>
+             <div class="inbox-widget">
+               <h5 class="mt-0">Recent</h5>
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-2.jpg" class="rounded-circle" alt="">
+                   <i class="online user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Tomaslau</a></p>
+                 <p class="inbox-item-text">I've finished it! See you so...</p>
+               </div>
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-3.jpg" class="rounded-circle" alt="">
+                   <i class="away user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Stillnotdavid</a></p>
+                 <p class="inbox-item-text">This theme is awesome!</p>
+               </div>
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-4.jpg" class="rounded-circle" alt="">
+                   <i class="online user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Kurafire</a></p>
+                 <p class="inbox-item-text">Nice to meet you</p>
+               </div>
+
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-5.jpg" class="rounded-circle" alt="">
+                   <i class="busy user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Shahedk</a></p>
+                 <p class="inbox-item-text">Hey! there I'm available...</p>
+               </div>
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-6.jpg" class="rounded-circle" alt="">
+                   <i class="user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Adhamdannaway</a></p>
+                 <p class="inbox-item-text">This theme is awesome!</p>
+               </div>
+
+               <hr>
+               <h5>Favorite <span class="float-right badge badge-pill badge-danger">18</span></h5>
+               <hr>
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-7.jpg" class="rounded-circle" alt="">
+                   <i class="busy user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Kennith</a></p>
+                 <p class="inbox-item-text">I've finished it! See you so...</p>
+               </div>
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-3.jpg" class="rounded-circle" alt="">
+                   <i class="busy user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Stillnotdavid</a></p>
+                 <p class="inbox-item-text">This theme is awesome!</p>
+               </div>
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-10.jpg" class="rounded-circle" alt="">
+                   <i class="online user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Kimberling</a></p>
+                 <p class="inbox-item-text">Nice to meet you</p>
+               </div>
+
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-4.jpg" class="rounded-circle" alt="">
+                   <i class="user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Kurafire</a></p>
+                 <p class="inbox-item-text">Hey! there I'm available...</p>
+               </div>
+               <div class="inbox-item">
+                 <div class="inbox-item-img"><img src="assets\images\users\avatar-9.jpg" class="rounded-circle" alt="">
+                   <i class="away user-status"></i></div>
+                 <p class="inbox-item-author"><a href="javascript: void(0);" class="text-dark">Leonareade</a></p>
+                 <p class="inbox-item-text">This theme is awesome!</p>
+               </div>
+
+               <div class="text-center mt-2">
+                 <a href="javascript:void(0);" class="text-muted"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load
+                   more </a>
+               </div>
+
+             </div> <!-- end inbox-widget -->
+           </div> <!-- end .p-3-->
+         </div>
+       </div>
+
+     </div> <!-- end slimscroll-menu-->
+   </div>
+
+</body>
+
+<script>
+  let forwardTimes = []
+
+  function updateTimeStats(timeInMs) {
+    forwardTimes = [timeInMs].concat(forwardTimes).slice(0, 30)
+    const avgTimeInMs = forwardTimes.reduce((total, t) => total + t) / forwardTimes.length
+    $('#time').val(`${Math.round(avgTimeInMs)} ms`)
+    $('#fps').val(`${faceapi.utils.round(1000 / avgTimeInMs)}`)
+  }
+
+  async function onPlay() {
+    const videoEl = $('#inputVideo').get(0)
+
+    if (videoEl.paused || videoEl.ended || !isFaceDetectionModelLoaded())
+      return setTimeout(() => onPlay())
+
+
+    const options = getFaceDetectorOptions()
+
+    const ts = Date.now()
+
+    const result = await faceapi.detectSingleFace(videoEl, options)
+
+    updateTimeStats(Date.now() - ts)
+
+    if (result) {
+      const canvas = $('#overlay').get(0)
+      const dims = faceapi.matchDimensions(canvas, videoEl, true)
+      faceapi.draw.drawDetections(canvas, faceapi.resizeResults(result, dims))
+    }
+
+    setTimeout(() => onPlay())
+  }
+
+  function b64toBlob(dataURI) {
+
+    var byteString = atob(dataURI.split(',')[1]);
+    var ab = new ArrayBuffer(byteString.length);
+    var ia = new Uint8Array(ab);
+
+    for (var i = 0; i < byteString.length; i++) {
+      ia[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([ab], {
+      type: 'image/png'
+    });
+  }
+  async function run() {
+    // load face detection model
+    await changeFaceDetector(TINY_FACE_DETECTOR)
+    changeInputSize(128)
+
+    // try to access users webcam and stream the images
+    // to the video element
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: {}
+    })
+    const videoEl = $('#inputVideo').get(0)
+    videoEl.srcObject = stream
+  }
+
+
+
+
+  // Tìm khuôn mặt giống nhất trong Person Group (Face Recognition)
+  const identify = async (faceIds) => {
+    console.log(`Begin to identity face.`);
+    let groupId = 'khmt13a';
+    const result = await $.ajax({
+      method: 'POST',
+      async: true,
+      url: "https://vuongcnm.cognitiveservices.azure.com/face/v1.0/identify",
+      contentType: "application/json",
+      headers: {
+        'Ocp-Apim-Subscription-Key': 'ef600e8842874cfebf8f5f642b5412eb'
+      },
+      // data: JSON.stringify({
+      //   "personGroupId": 'khmt13a',
+      //   "faceIds": ['7f38fac7-019f-4acf-841c-4f9416bad904'],
+      //   // "maxNumOfCandidatesReturned": 1,
+      //   // "confidenceThreshold": 0.5
+      // })
+      data: JSON.stringify({
+        "personGroupId": 'khmt13a',
+        "faceIds": faceIds,
+      })
+    })
+    return result;
+
+
+    // if (res.statusCode == 200) {
+    //   console.log(`Finish identity face.`);
+    //   return JSON.parse(res.getBody('utf8'));
+    // } else {
+    //   console.log('Error');
+    //   console.log(res.getBody('utf8'));
+    // }
+  }
+
+  async function Hello() {
+    const result = await $.ajax({
+      method: 'GET',
+      url: "https://5f408bb7a5e9db0016301e91.mockapi.io/test/DataReturn",
+      contentType: "application/json",
+    })
+    return result;
+  }
+  async function getDSSV() {
+    const result = await $.ajax({
+      method: 'GET',
+      url: 'http://localhost:4000/getListAttendClass',
+      // contentType: "application/json",
+      success: function (data) {
+        console.log(data);
+      }
+
+    });
+    return result;
+  }
+  async function getHeader() {
+    const result = await $.ajax({
+      method: 'GET',
+      url: 'http://localhost:4000/getHeaderTable',
+      // contentType: "application/json",
+      success: function (data) {
+        console.log(data);
+      }
+
+    });
+    return result;
+  }
+  async function getStudentAttentClass() {
+      const result = await $.ajax({
+        method: 'GET',
+        url: 'http://localhost:4000/getListAttenrCurrentDate',
+        success: function (data) {
+          console.log(data);
+        }
+
+      });
+      return result;
+    }
+    (async function () {
+      person = await Hello();
+      listDD = await getDSSV();
+      day_go_to_school = await getHeader();
+      students_attent_class = await getStudentAttentClass();
+      console.log(day_go_to_school)
+      console.log(listDD)
+      console.log(students_attent_class)
+    });
+
+  // Nhận diện vị trí khuôn mặt và tên idol từ URL ảnh
+  const video1 = document.getElementById('inputVideo')
+  var _selectIndex = 0;
+  video1.addEventListener('play', () => {
+
+    const canvas = faceapi.createCanvasFromMedia(video1)
+    canvas.setAttribute("id", _selectIndex++);
+    document.body.append(canvas)
+    const displaySize = {
+      width: video1.width,
+      height: video1.height
+    }
+    // console.log(displaySize);
+    var canvas2 = document.getElementById("0");
+    console.log(canvas2);
+    var dataURL = canvas2.toDataURL('image/jpeg');
+    console.log(dataURL);
+    fetch(dataURL)
+      .then(async res => await res.blob())
+      .then(async blobData => {
+        $.ajax({
+            async: false, // meow pjt
+            method: 'POST',
+            url: "https://vuongcnm.cognitiveservices.azure.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&recognitionModel=recognition_03&returnRecognitionModel=true&detectionModel=detection_02",
+            contentType: "application/octet-stream",
+            headers: {
+              'Ocp-Apim-Subscription-Key': 'ef600e8842874cfebf8f5f642b5412eb'
+            },
+            processData: false,
+            data: blobData,
+          })
+          .done((data) => {
+
+
+            var identifiedResult;
+            (async function () {
+              identifiedResult = await identify(data.map(face => face.faceId));
+              person = await Hello();
+              listDD = await getDSSV();
+              day_go_to_school = await getHeader();
+              students_attent_class = await getStudentAttentClass();
+              console.log(day_go_to_school)
+              console.log(listDD)
+              console.log(students_attent_class)
+              console.log(identifiedResult)
+
+              // var allIdols = identifiedResult.map(result => {
+
+              // Sau khi đã phát hiện các khuôn mặt,
+              // So sánh chúng với mặt đã có trong person group
+
+
+
+              var allIdols = identifiedResult.map(result => {
+                console.log(result)
+                let d = new Date();
+                // d is "Sun Oct 13 2013 20:32:01 GMT+0530 (India Standard Time)"
+                let datetext = d.toTimeString();
+                // datestring is "20:32:01 GMT+0530 (India Standard Time)"
+                // Split with ' ' and we get: ["20:32:01", "GMT+0530", "(India", "Standard", "Time)"]
+                // Take the first value from array :)
+                datetext = datetext.split(' ')[0];
+                var today = new Date();
+                var date1 = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today
+                  .getDate();
+
+                // Lấy vị trí khuôn mặt trong ảnh để hiển thị
+                // result.face = person.filter(face => face.faceId == result.faceId)[0].faceRectangle;
+
+                // Tìm idol đã được nhận diện từ DB
+                if (result.candidates.length > 0) {
+
+                  // Kết quả chỉ trả về ID, dựa vào ID này ta tìm tên của idol
+                  var idolId = result.candidates[0].personId;
+                  console.log(idolId)
+                  console.log(person);
+                  var idol = person.filter(person => person.personId == idolId)[0];
+                  console.log(idol);
+                  result.idol = {
+                    id: idol.userData,
+                    name: idol.name,
+                    time: datetext,
+                    day1: date1
+                  };
+                } else {
+                  result.idol = {
+                    id: 0,
+                    name: 'Unknown'
+                  }
+                }
+                return result;
+              });
+              var data1 = [];
+              allIdols.map((data) => {
+                data1.push({
+                  id: data.idol.id,
+                  name: data.idol.name,
+                  time: data.idol.time,
+                  day: data.idol.day1
+                })
+              })
+              var result = data1.filter(student => student.id !== 0)
+              console.log(result);
+              // console.log(`Finish recognize image:`);
+              // console.log(allIdols);
+              if (result.length > 0) {
+                $.ajax({
+                  method: 'POST',
+                  url: 'http://localhost:4000/getInfo',
+                  data: {
+                    'data': result,
+                  },
+                  success: function (data) {
+                    console.log(data);
+                  }
+
+                });
+              }
+              return result;
+            })();
+          });
+      });
+  })
+  window.onload = async  () => {
+      var daVaoLop = 0;
+      var soLuong = 0;
+      var chuaVaoLop = 0; 
+      var htmlBody = ` <tr>`
+
+
+    await $.ajax({
+        aysnc: false,
+          method: 'GET',
+          url: 'http://localhost:4000/getListAttenrCurrentDate',
+          success: function (data) {
+            console.log(data);
+            data.map((value, index) => {
+               htmlBody +=` <td>${index+1}</td>
+                            <td>${value.id_student}</td>
+                            <td>${value.name_student}</td>
+                            <td>${value.time_in_class}</td>
+                            <td>${value.status==1?"Trễ":value.status==2?"Vắng":"Đúng giờ"}</td>           
+               `
+               
+              });
+              htmlBody+='</tr>';
+              document.getElementById('listStuds').innerHTML = htmlBody;
+              console.log(htmlBody);
+            }
+            
+
+          });
+     await $.ajax({
+        aysnc: false,
+          method: 'GET',
+          url: 'http://localhost:4000/getNumberStudent',
+          success: function (data) {
+           daVaoLop = parseInt(data[0].soluong)
+           console.log(data);
+           document.getElementById('davaolop').innerHTML = parseInt(data[0].soluong);
+         
+            }
+            
+
+          });
+          console.log(daVaoLop);
+    await $.ajax({
+        aysnc: false,
+          method: 'GET',
+          url: 'http://localhost:4000/getNumberinClass ',
+          success: function (data) {
+            console.log(data);
+              soLuong = parseInt(data[0].soluonglop)
+              document.getElementById('soluongsinhvien').innerHTML = parseInt(data[0].soluonglop);
+            }
+            
+
+          });
+          // soLuong = parseInt(data.soluonglop)
+          document.getElementById('chuavaolop').innerHTML = parseInt(soLuong-daVaoLop);
+      }
+
+      function updateResults() {}
+
+      $(document).ready(function () {
+        // renderNavBar('#navbar', 'webcam_face_detection')
+        initFaceDetectionControls()
+        run()
+      })
+</script>
+     <!-- <script src="assets\js\vendor.min.js"></script> -->
+
+  <!-- third party js -->
+  <script src="assets\libs\datatables\jquery.dataTables.min.js"></script>
+  <script src="assets\libs\datatables\dataTables.bootstrap4.js"></script>
+  <script src="assets\libs\datatables\dataTables.responsive.min.js"></script>
+  <script src="assets\libs\datatables\responsive.bootstrap4.min.js"></script>
+  <script src="assets\libs\datatables\dataTables.buttons.min.js"></script>
+  <script src="assets\libs\datatables\buttons.bootstrap4.min.js"></script>
+  <script src="assets\libs\datatables\buttons.html5.min.js"></script>
+  <script src="assets\libs\datatables\buttons.flash.min.js"></script>
+  <script src="assets\libs\datatables\buttons.print.min.js"></script>
+  <script src="assets\libs\datatables\dataTables.keyTable.min.js"></script>
+  <script src="assets\libs\datatables\dataTables.select.min.js"></script>
+  <script src="assets\libs\pdfmake\pdfmake.min.js"></script>
+  <script src="assets\libs\pdfmake\vfs_fonts.js"></script>
+  <!-- third party js ends -->
+
+  <!-- Datatables init -->
+  <script src="assets\js\pages\datatables.init.js"></script>
+
+  <!-- App js -->
+    <script src="assets\js\app.min.js"></script> </body>
+
+</html>

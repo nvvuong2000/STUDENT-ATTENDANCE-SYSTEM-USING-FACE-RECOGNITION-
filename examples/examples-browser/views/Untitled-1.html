@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="assets\images\favicon.ico">
+
+  <!-- plugin css -->
+  <link href="assets\libs\jquery-vectormap\jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+
+  <!-- App css -->
+  <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
+  <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
+  <script src="face-api.js"></script>
+  <script src="js/commons.js"></script>
+  <script src="js/faceDetectionControls.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css"> -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+  
+   <div id="wrapper">
+    <div class="left-side-menu" style="">
+
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 3729.4px;"><div class="slimscroll-menu" style="overflow: hidden; width: auto; height: 3729.4px;">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu" class="mm-active">
+
+                        <ul class="metismenu mm-show" id="side-menu">
+
+                            <li class="menu-title">Navigation</li>
+
+                            <li class="mm-active">
+                                <a href="javascript: void(0);" class="waves-effect active">
+                                    <i class="remixicon-dashboard-line"></i>
+                                    <span class="badge badge-success badge-pill float-right">2</span>
+                                    <span> Dashboards </span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse mm-show" aria-expanded="false">
+                                    <li>
+                                        <a href="index.html">Dashboard 1</a>
+                                    </li>
+                                    <li class="mm-active">
+                                        <a href="dashboard-2.html" class="active">Dashboard 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-stack-line"></i>
+                                    <span> Apps </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="apps-kanbanboard.html">Kanban Board</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-companies.html">Companies</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-calendar.html">Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-filemanager.html">File Manager</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-tickets.html">Tickets</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-team.html">Team Members</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-layout-line"></i>
+                                    <span class="badge badge-pink float-right">New</span>
+                                    <span> Layouts </span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="layouts-sidebar-sm.html">Small Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-dark-sidebar.html">Dark Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-light-topbar.html">Light Topbar</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-preloader.html">Preloader</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-sidebar-collapsed.html">Sidebar Collapsed</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts-boxed.html">Boxed</a>
+                                    </li>
+                                </ul>
+                            </li>
+                
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-mail-open-line"></i>
+                                    <span> Email </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="email-inbox.html">Inbox</a>
+                                    </li>
+                                    <li>
+                                        <a href="email-read.html">Read Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="email-compose.html">Compose Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="email-templates.html">Email Templates</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-file-copy-2-line"></i>
+                                    <span> Pages </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="pages-starter.html">Starter</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-login.html">Log In</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-register.html">Register</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-recoverpw.html">Recover Password</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-lock-screen.html">Lock Screen</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-logout.html">Logout</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-confirm-mail.html">Confirm Mail</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-404.html">Error 404</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-404-alt.html">Error 404-alt</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages-500.html">Error 500</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-pages-line"></i>
+                                    <span> Extra Pages </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="extras-profile.html">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-timeline.html">Timeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-invoice.html">Invoice</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-faqs.html">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-tour.html">Tour Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-pricing.html">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-maintenance.html">Maintenance</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-coming-soon.html">Coming Soon</a>
+                                    </li>
+                                    <li>
+                                        <a href="extras-gallery.html">Gallery</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-title mt-2">Components</li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-briefcase-5-line"></i>
+                                    <span> UI Elements </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="ui-buttons.html">Buttons</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-cards.html">Cards</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-portlets.html">Portlets</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-modals.html">Modals</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-progress.html">Progress</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-notifications.html">Notifications</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-ribbons.html">Ribbons</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-spinners.html">Spinners</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-general.html">General UI</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-typography.html">Typography</a>
+                                    </li>
+                                    <li>
+                                        <a href="ui-grid.html">Grid</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="widgets.html" class="waves-effect">
+                                    <i class="remixicon-vip-crown-2-line"></i>
+                                    <span> Widgets </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-trophy-line"></i>
+                                    <span class="badge badge-primary float-right">Hot</span>
+                                    <span> Admin UI </span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="admin-sweet-alert.html">Sweet Alert</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-nestable.html">Nestable List</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-treeview.html">Treeview</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-range-slider.html">Range Slider</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin-carousel.html">Carousel</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-vip-diamond-line"></i>
+                                    <span> Forms </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="forms-elements.html">General Elements</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms-advanced.html">Advanced</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms-validation.html">Validation</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms-pickers.html">Pickers</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms-wizard.html">Wizard</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms-summernote.html">Summernote</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms-quilljs.html">Quilljs Editor</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms-file-uploads.html">File Uploads</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms-x-editable.html">X Editable</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-table-line"></i>
+                                    <span> Tables </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="tables-basic.html">Basic Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-datatables.html">Data Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-editable.html">Editable Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-tablesaw.html">Tablesaw Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-responsive.html">Responsive Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="tables-footables.html">FooTables</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-bar-chart-line"></i>
+                                    <span> Charts </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="charts-flot.html">Flot Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="charts-apex.html">Apex Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="charts-morris.html">Morris Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="charts-chartjs.html">Chartjs Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="charts-c3.html">C3 Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="charts-peity.html">Peity Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="charts-chartist.html">Chartist Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="charts-sparklines.html">Sparklines Charts</a>
+                                    </li>
+                                    <li>
+                                        <a href="charts-knob.html">Jquery Knob Charts</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-honour-line"></i>
+                                    <span> Icons </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="icons-remix.html">Remix Icons</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-feather.html">Feather Icons</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-mdi.html">Material Design Icons</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-font-awesome.html">Font Awesome</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-themify.html">Themify</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons-weather.html">Weather</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-map-pin-line"></i>
+                                    <span> Maps </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="maps-google.html">Google Maps</a>
+                                    </li>
+                                    <li>
+                                        <a href="maps-vector.html">Vector Maps</a>
+                                    </li>
+                                    <li>
+                                        <a href="maps-mapael.html">Mapael Maps</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect">
+                                    <i class="remixicon-folder-add-line"></i>
+                                    <span> Multi Level </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level nav mm-collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="javascript: void(0);">Level 1.1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0);" aria-expanded="false">Level 1.2
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <ul class="nav-third-level nav mm-collapse" aria-expanded="false">
+                                            <li>
+                                                <a href="javascript: void(0);">Level 2.1</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);">Level 2.2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div><div class="slimScrollBar" style="background: rgb(158, 165, 171); width: 8px; position: absolute; top: -3112.4px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 417.986px;"></div><div class="slimScrollRail" style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                <!-- Sidebar -left -->
+
+            </div>
+     <!-- Topbar Start -->
+     <div class="navbar-custom">
+       <ul class="list-unstyled topnav-menu float-right mb-0">
+
+         <li class="d-none d-sm-block">
+           <form class="app-search">
+             <div class="app-search-box">
+               <div class="input-group">
+                 <input type="text" class="form-control" placeholder="Search...">
+                 <div class="input-group-append">
+                   <button class="btn" type="submit">
+                     <i class="fe-search"></i>
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </form>
+         </li>
+
+         <li class="dropdown d-none d-lg-block">
+           <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+             role="button" aria-haspopup="false" aria-expanded="false">
+             <img src="assets\images\flags\us.jpg" alt="user-image" class="mr-1" height="12"> <span
+               class="align-middle">English <i class="mdi mdi-chevron-down"></i> </span>
+           </a>
+           <div class="dropdown-menu dropdown-menu-right">
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <img src="assets\images\flags\germany.jpg" alt="user-image" class="mr-1" height="12"> <span
+                 class="align-middle">German</span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <img src="assets\images\flags\italy.jpg" alt="user-image" class="mr-1" height="12"> <span
+                 class="align-middle">Italian</span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <img src="assets\images\flags\spain.jpg" alt="user-image" class="mr-1" height="12"> <span
+                 class="align-middle">Spanish</span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <img src="assets\images\flags\russia.jpg" alt="user-image" class="mr-1" height="12"> <span
+                 class="align-middle">Russian</span>
+             </a>
+
+           </div>
+         </li>
+
+         <li class="dropdown notification-list">
+           <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
+             aria-haspopup="false" aria-expanded="false">
+             <i class="fe-bell noti-icon"></i>
+             <span class="badge badge-danger rounded-circle noti-icon-badge">4</span>
+           </a>
+           <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+             <!-- item-->
+             <div class="dropdown-item noti-title">
+               <h5 class="m-0">
+                 <span class="float-right">
+                   <a href="" class="text-dark">
+                     <small>Clear All</small>
+                   </a>
+                 </span>Notification
+               </h5>
+             </div>
+
+             <div class="slimscroll noti-scroll">
+
+               <!-- item-->
+               <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                 <div class="notify-icon bg-soft-primary text-primary">
+                   <i class="mdi mdi-comment-account-outline"></i>
+                 </div>
+                 <p class="notify-details">Doug Dukes commented on Admin Dashboard
+                   <small class="text-muted">1 min ago</small>
+                 </p>
+               </a>
+
+               <!-- item-->
+               <a href="javascript:void(0);" class="dropdown-item notify-item">
+                 <div class="notify-icon">
+                   <img src="assets\images\users\avatar-2.jpg" class="img-fluid rounded-circle" alt="">
+                 </div>
+                 <p class="notify-details">Mario Drummond</p>
+                 <p class="text-muted mb-0 user-msg">
+                   <small>Hi, How are you? What about our next meeting</small>
+                 </p>
+               </a>
+
+               <!-- item-->
+               <a href="javascript:void(0);" class="dropdown-item notify-item">
+                 <div class="notify-icon">
+                   <img src="assets\images\users\avatar-4.jpg" class="img-fluid rounded-circle" alt="">
+                 </div>
+                 <p class="notify-details">Karen Robinson</p>
+                 <p class="text-muted mb-0 user-msg">
+                   <small>Wow ! this admin looks good and awesome design</small>
+                 </p>
+               </a>
+
+               <!-- item-->
+               <a href="javascript:void(0);" class="dropdown-item notify-item">
+                 <div class="notify-icon bg-soft-warning text-warning">
+                   <i class="mdi mdi-account-plus"></i>
+                 </div>
+                 <p class="notify-details">New user registered.
+                   <small class="text-muted">5 hours ago</small>
+                 </p>
+               </a>
+
+               <!-- item-->
+               <a href="javascript:void(0);" class="dropdown-item notify-item">
+                 <div class="notify-icon bg-info">
+                   <i class="mdi mdi-comment-account-outline"></i>
+                 </div>
+                 <p class="notify-details">Caleb Flakelar commented on Admin
+                   <small class="text-muted">4 days ago</small>
+                 </p>
+               </a>
+
+               <!-- item-->
+               <a href="javascript:void(0);" class="dropdown-item notify-item">
+                 <div class="notify-icon bg-secondary">
+                   <i class="mdi mdi-heart"></i>
+                 </div>
+                 <p class="notify-details">Carlos Crouch liked
+                   <b>Admin</b>
+                   <small class="text-muted">13 days ago</small>
+                 </p>
+               </a>
+             </div>
+
+             <!-- All-->
+             <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+               View all
+               <i class="fi-arrow-right"></i>
+             </a>
+
+           </div>
+         </li>
+
+         <li class="dropdown notification-list">
+           <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+             role="button" aria-haspopup="false" aria-expanded="false">
+             <img src="assets\images\users\avatar-1.jpg" alt="user-image" class="rounded-circle">
+             <span class="pro-user-name ml-1">
+               Nik Patel <i class="mdi mdi-chevron-down"></i>
+             </span>
+           </a>
+           <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+             <!-- item-->
+             <div class="dropdown-header noti-title">
+               <h6 class="text-overflow m-0">Welcome !</h6>
+             </div>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <i class="remixicon-account-circle-line"></i>
+               <span>My Account</span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <i class="remixicon-settings-3-line"></i>
+               <span>Settings</span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <i class="remixicon-wallet-line"></i>
+               <span>My Wallet <span class="badge badge-success float-right">3</span> </span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <i class="remixicon-lock-line"></i>
+               <span>Lock Screen</span>
+             </a>
+
+             <div class="dropdown-divider"></div>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item notify-item">
+               <i class="remixicon-logout-box-line"></i>
+               <span>Logout</span>
+             </a>
+
+           </div>
+         </li>
+
+
+         <li class="dropdown notification-list">
+           <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
+             <i class="fe-settings noti-icon"></i>
+           </a>
+         </li>
+
+
+       </ul>
+
+       <!-- LOGO -->
+       <div class="logo-box">
+         <a href="index.html" class="logo text-center">
+           <span class="logo-lg">
+             <img src="assets\images\logo-light.png" alt="" height="20">
+             <!-- <span class="logo-lg-text-light">Xeria</span> -->
+           </span>
+           <span class="logo-sm">
+             <!-- <span class="logo-sm-text-dark">X</span> -->
+             <img src="assets\images\logo-sm.png" alt="" height="24">
+           </span>
+         </a>
+       </div>
+
+       <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+         <li>
+           <button class="button-menu-mobile waves-effect waves-light">
+             <i class="fe-menu"></i>
+           </button>
+         </li>
+
+         <li class="dropdown d-none d-lg-block">
+           <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
+             aria-haspopup="false" aria-expanded="false">
+             Create New
+             <i class="mdi mdi-chevron-down"></i>
+           </a>
+           <div class="dropdown-menu">
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item">
+               <i class="fe-briefcase mr-1"></i>
+               <span>New Projects</span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item">
+               <i class="fe-user mr-1"></i>
+               <span>Create Users</span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item">
+               <i class="fe-bar-chart-line- mr-1"></i>
+               <span>Revenue Report</span>
+             </a>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item">
+               <i class="fe-settings mr-1"></i>
+               <span>Settings</span>
+             </a>
+
+             <div class="dropdown-divider"></div>
+
+             <!-- item-->
+             <a href="javascript:void(0);" class="dropdown-item">
+               <i class="fe-headphones mr-1"></i>
+               <span>Help & Support</span>
+             </a>
+
+           </div>
+         </li>
+
+         <li class="dropdown dropdown-mega d-none d-lg-block">
+           <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
+             aria-haspopup="false" aria-expanded="false">
+             Mega Menu
+             <i class="mdi mdi-chevron-down"></i>
+           </a>
+           <div class="dropdown-menu dropdown-megamenu">
+             <div class="row">
+               <div class="col-sm-8">
+
+                 <div class="row">
+                   <div class="col-md-4">
+                     <h5 class="text-dark mt-0">UI Components</h5>
+                     <ul class="list-unstyled megamenu-list">
+                       <li>
+                         <a href="javascript:void(0);">Widgets</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Nestable List</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Range Sliders</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Masonry Items</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Sweet Alerts</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Treeview Page</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Tour Page</a>
+                       </li>
+                     </ul>
+                   </div>
+
+                   <div class="col-md-4">
+                     <h5 class="text-dark mt-0">Applications</h5>
+                     <ul class="list-unstyled megamenu-list">
+                       <li>
+                         <a href="javascript:void(0);">eCommerce Pages</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">CRM Pages</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Email</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Calendar</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Team Contacts</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Task Board</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Email Templates</a>
+                       </li>
+                     </ul>
+                   </div>
+
+                   <div class="col-md-4">
+                     <h5 class="text-dark mt-0">Extra Pages</h5>
+                     <ul class="list-unstyled megamenu-list">
+                       <li>
+                         <a href="javascript:void(0);">Left Sidebar with User</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Menu Collapsed</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Small Left Sidebar</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">New Header Style</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Search Result</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Gallery Pages</a>
+                       </li>
+                       <li>
+                         <a href="javascript:void(0);">Maintenance & Coming Soon</a>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-sm-4">
+                 <div class="text-center mt-3">
+                   <h3 class="text-dark">Special Discount Sale!</h3>
+                   <h4>Save up to 70% off.</h4>
+                   <button class="btn btn-primary mt-3">Download Now <i class="ml-1 mdi mdi-arrow-right"></i></button>
+                 </div>
+               </div>
+             </div>
+
+           </div>
+         </li>
+       </ul>
+     </div>
+   
+
+
+    <div class="row">
+      <div class="col-md-6 col-xl-3">
+        <div class="card-box">
+          <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title=""
+            data-original-title="More Info"></i>
+          <h4 class="mt-0 font-16">Income Status</h4>
+          <h2 class="text-primary my-3 text-center">$<span data-plugin="counterup">31,570</span></h2>
+          <p class="text-muted mb-0">Total income: $22506 <span class="float-right"><i
+                class="fa fa-caret-up text-success mr-1"></i>10.25%</span></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3">
+        <div class="card-box">
+          <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title=""
+            data-original-title="More Info"></i>
+          <h4 class="mt-0 font-16">Sales Status</h4>
+          <h2 class="text-primary my-3 text-center"><span data-plugin="counterup">683</span></h2>
+          <p class="text-muted mb-0">Total sales: 2398 <span class="float-right"><i
+                class="fa fa-caret-down text-danger mr-1"></i>7.85%</span></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3">
+        <div class="card-box">
+          <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title=""
+            data-original-title="More Info"></i>
+          <h4 class="mt-0 font-16">Recent Users</h4>
+          <h2 class="text-primary my-3 text-center"><span data-plugin="counterup">3.2</span>M</h2>
+          <p class="text-muted mb-0">Total users: 121 M <span class="float-right"><i
+                class="fa fa-caret-up text-success mr-1"></i>3.64%</span></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3">
+        <div class="card-box">
+          <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title=""
+            data-original-title="More Info"></i>
+          <h4 class="mt-0 font-16">Total Revenue</h4>
+          <h2 class="text-primary my-3 text-center">$<span data-plugin="counterup">68,541</span></h2>
+          <p class="text-muted mb-0">Total revenue: $1.2 M <span class="float-right"><i
+                class="fa fa-caret-up text-success mr-1"></i>17.48%</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            <!-- <div id="navbar"></div> -->
+            <div class="center-content page-container">
+
+         
+              <div style="position: relative" class="margin">
+                <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
+                <canvas id="overlay" />
+              </div>
+ 
+            </div>
+          </div> <!-- end card-body-->
+        </div> <!-- end card-->
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-widgets">
+              <a href="javascript: void(0);" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
+              <a data-toggle="collapse" href="#cardCollpase5" role="button" aria-expanded="true"
+                aria-controls="cardCollpase5" class=""><i class="mdi mdi-minus"></i></a>
+              <a href="javascript: void(0);" data-toggle="remove"><i class="mdi mdi-close"></i></a>
+            </div>
+            <h4 class="header-title mb-0">Top Selling Products</h4>
+
+            <div id="cardCollpase5" class="pt-3 collapse show" >
+              <div class="table-responsive">
+                <table class="table table-hover table-centered mb-0">
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>MSSV</th>
+                      <th>Họ Tên</th>
+                      <th>Thời gian vào lớp</th>
+                      <th>Trạng thái</th>
+                    </tr>
+                  </thead>
+                  <tbody id="listStuds">
+                    <tr>
+                      <td>ASOS Ridley High Waist</td>
+                      <td>$79.49</td>
+                      <td>82</td>
+                      <td>$6,518.18</td>
+                    </tr>
+                    <tr>
+                      <td>Marco Lightweight Shirt</td>
+                      <td>$128.50</td>
+                      <td>37</td>
+                      <td>$4,754.50</td>
+                    </tr>
+                    <tr>
+                      <td>Half Sleeve Shirt</td>
+                      <td>$39.99</td>
+                      <td>64</td>
+                      <td>$2,559.36</td>
+                    </tr>
+                    <tr>
+                      <td>Lightweight Jacket</td>
+                      <td>$20.00</td>
+                      <td>184</td>
+                      <td>$3,680.00</td>
+                    </tr>
+                    <tr>
+                      <td>Marco Shoes</td>
+                      <td>$28.49</td>
+                      <td>69</td>
+                      <td>$1,965.81</td>
+                    </tr>
+                    <tr>
+                      <td>ASOS Ridley High Waist</td>
+                      <td>$79.49</td>
+                      <td>82</td>
+                      <td>$6,518.18</td>
+                    </tr>
+                    <tr>
+                      <td>Half Sleeve Shirt</td>
+                      <td>$39.99</td>
+                      <td>64</td>
+                      <td>$2,559.36</td>
+                    </tr>
+                    <tr>
+                      <td>Lightweight Jacket</td>
+                      <td>$20.00</td>
+                      <td>184</td>
+                      <td>$3,680.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> <!-- end table responsive-->
+            </div> <!-- collapsed end -->
+          </div> <!-- end card-body -->
+        </div> <!-- end card-->
+      </div>
+    </div>
+
+  </div> <!-- end col -->
+
+</body>
+
+<script>
+  let forwardTimes = []
+
+  function updateTimeStats(timeInMs) {
+    forwardTimes = [timeInMs].concat(forwardTimes).slice(0, 30)
+    const avgTimeInMs = forwardTimes.reduce((total, t) => total + t) / forwardTimes.length
+    $('#time').val(`${Math.round(avgTimeInMs)} ms`)
+    $('#fps').val(`${faceapi.utils.round(1000 / avgTimeInMs)}`)
+  }
+
+  async function onPlay() {
+    const videoEl = $('#inputVideo').get(0)
+
+    if (videoEl.paused || videoEl.ended || !isFaceDetectionModelLoaded())
+      return setTimeout(() => onPlay())
+
+
+    const options = getFaceDetectorOptions()
+
+    const ts = Date.now()
+
+    const result = await faceapi.detectSingleFace(videoEl, options)
+
+    updateTimeStats(Date.now() - ts)
+
+    if (result) {
+      const canvas = $('#overlay').get(0)
+      const dims = faceapi.matchDimensions(canvas, videoEl, true)
+      faceapi.draw.drawDetections(canvas, faceapi.resizeResults(result, dims))
+    }
+
+    setTimeout(() => onPlay())
+  }
+
+  function b64toBlob(dataURI) {
+
+    var byteString = atob(dataURI.split(',')[1]);
+    var ab = new ArrayBuffer(byteString.length);
+    var ia = new Uint8Array(ab);
+
+    for (var i = 0; i < byteString.length; i++) {
+      ia[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([ab], {
+      type: 'image/png'
+    });
+  }
+  async function run() {
+    // load face detection model
+    await changeFaceDetector(TINY_FACE_DETECTOR)
+    changeInputSize(128)
+
+    // try to access users webcam and stream the images
+    // to the video element
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: {}
+    })
+    const videoEl = $('#inputVideo').get(0)
+    videoEl.srcObject = stream
+  }
+
+
+
+
+  // Tìm khuôn mặt giống nhất trong Person Group (Face Recognition)
+  const identify = async (faceIds) => {
+    console.log(`Begin to identity face.`);
+    let groupId = 'khmt13a';
+    const result = await $.ajax({
+      method: 'POST',
+      async: true,
+      url: "https://vuongcnm.cognitiveservices.azure.com/face/v1.0/identify",
+      contentType: "application/json",
+      headers: {
+        'Ocp-Apim-Subscription-Key': 'ef600e8842874cfebf8f5f642b5412eb'
+      },
+      // data: JSON.stringify({
+      //   "personGroupId": 'khmt13a',
+      //   "faceIds": ['7f38fac7-019f-4acf-841c-4f9416bad904'],
+      //   // "maxNumOfCandidatesReturned": 1,
+      //   // "confidenceThreshold": 0.5
+      // })
+      data: JSON.stringify({
+        "personGroupId": 'khmt13a',
+        "faceIds": faceIds,
+      })
+    })
+    return result;
+
+
+    // if (res.statusCode == 200) {
+    //   console.log(`Finish identity face.`);
+    //   return JSON.parse(res.getBody('utf8'));
+    // } else {
+    //   console.log('Error');
+    //   console.log(res.getBody('utf8'));
+    // }
+  }
+
+  async function Hello() {
+    const result = await $.ajax({
+      method: 'GET',
+      url: "https://5f408bb7a5e9db0016301e91.mockapi.io/test/DataReturn",
+      contentType: "application/json",
+    })
+    return result;
+  }
+  async function getDSSV() {
+    const result = await $.ajax({
+      method: 'GET',
+      url: 'http://localhost:4000/getListAttendClass',
+      // contentType: "application/json",
+      success: function (data) {
+        console.log(data);
+      }
+
+    });
+    return result;
+  }
+  async function getHeader() {
+    const result = await $.ajax({
+      method: 'GET',
+      url: 'http://localhost:4000/getHeaderTable',
+      // contentType: "application/json",
+      success: function (data) {
+        console.log(data);
+      }
+
+    });
+    return result;
+  }
+  async function getStudentAttentClass() {
+      const result = await $.ajax({
+        method: 'GET',
+        url: 'http://localhost:4000/getListAttenrCurrentDate',
+        success: function (data) {
+          console.log(data);
+        }
+
+      });
+      return result;
+    }
+    (async function () {
+      person = await Hello();
+      listDD = await getDSSV();
+      day_go_to_school = await getHeader();
+      students_attent_class = await getStudentAttentClass();
+      console.log(day_go_to_school)
+      console.log(listDD)
+      console.log(students_attent_class)
+    });
+
+  // Nhận diện vị trí khuôn mặt và tên idol từ URL ảnh
+  const video1 = document.getElementById('inputVideo')
+  var _selectIndex = 0;
+  video1.addEventListener('play', () => {
+
+    const canvas = faceapi.createCanvasFromMedia(video1)
+    canvas.setAttribute("id", _selectIndex++);
+    document.body.append(canvas)
+    const displaySize = {
+      width: video1.width,
+      height: video1.height
+    }
+    // console.log(displaySize);
+    var canvas2 = document.getElementById("0");
+    console.log(canvas2);
+    var dataURL = canvas2.toDataURL('image/jpeg');
+    console.log(dataURL);
+    fetch(dataURL)
+      .then(async res => await res.blob())
+      .then(async blobData => {
+        $.ajax({
+            async: false, // meow pjt
+            method: 'POST',
+            url: "https://vuongcnm.cognitiveservices.azure.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&recognitionModel=recognition_03&returnRecognitionModel=true&detectionModel=detection_02",
+            contentType: "application/octet-stream",
+            headers: {
+              'Ocp-Apim-Subscription-Key': 'ef600e8842874cfebf8f5f642b5412eb'
+            },
+            processData: false,
+            data: blobData,
+          })
+          .done((data) => {
+
+
+            var identifiedResult;
+            (async function () {
+              identifiedResult = await identify(data.map(face => face.faceId));
+              person = await Hello();
+              listDD = await getDSSV();
+              day_go_to_school = await getHeader();
+              students_attent_class = await getStudentAttentClass();
+              console.log(day_go_to_school)
+              console.log(listDD)
+              console.log(students_attent_class)
+              console.log(identifiedResult)
+
+              // var allIdols = identifiedResult.map(result => {
+
+              // Sau khi đã phát hiện các khuôn mặt,
+              // So sánh chúng với mặt đã có trong person group
+
+
+
+              var allIdols = identifiedResult.map(result => {
+                console.log(result)
+                let d = new Date();
+                // d is "Sun Oct 13 2013 20:32:01 GMT+0530 (India Standard Time)"
+                let datetext = d.toTimeString();
+                // datestring is "20:32:01 GMT+0530 (India Standard Time)"
+                // Split with ' ' and we get: ["20:32:01", "GMT+0530", "(India", "Standard", "Time)"]
+                // Take the first value from array :)
+                datetext = datetext.split(' ')[0];
+                var today = new Date();
+                var date1 = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today
+                  .getDate();
+
+                // Lấy vị trí khuôn mặt trong ảnh để hiển thị
+                // result.face = person.filter(face => face.faceId == result.faceId)[0].faceRectangle;
+
+                // Tìm idol đã được nhận diện từ DB
+                if (result.candidates.length > 0) {
+
+                  // Kết quả chỉ trả về ID, dựa vào ID này ta tìm tên của idol
+                  var idolId = result.candidates[0].personId;
+                  console.log(idolId)
+                  console.log(person);
+                  var idol = person.filter(person => person.personId == idolId)[0];
+                  console.log(idol);
+                  result.idol = {
+                    id: idol.userData,
+                    name: idol.name,
+                    time: datetext,
+                    day1: date1
+                  };
+                } else {
+                  result.idol = {
+                    id: 0,
+                    name: 'Unknown'
+                  }
+                }
+                return result;
+              });
+              var data1 = [];
+              allIdols.map((data) => {
+                data1.push({
+                  id: data.idol.id,
+                  name: data.idol.name,
+                  time: data.idol.time,
+                  day: data.idol.day1
+                })
+              })
+              var result = data1.filter(student => student.id !== 0)
+              console.log(result);
+              // console.log(`Finish recognize image:`);
+              // console.log(allIdols);
+              if (result.length > 0) {
+                $.ajax({
+                  method: 'POST',
+                  url: 'http://localhost:4000/getInfo',
+                  data: {
+                    'data': result,
+                  },
+                  success: function (data) {
+                    console.log(data);
+                  }
+
+                });
+              }
+              return result;
+            })();
+          });
+      });
+  })
+  window.onload = () => {
+      var htmlBody = ` <tr>`
+
+
+      $.ajax({
+          method: 'GET',
+          url: 'http://localhost:4000/getListAttenrCurrentDate',
+          success: function (data) {
+            console.log(data);
+            data.map((value, index) => {
+               htmlBody +=` <td>${index+1}</td>
+                            <td>${value.id_student}</td>
+                            <td>${value.name_student}</td>
+                            <td>${value.time_in_class}</td>
+                            <td>${value.status==1?"Trễ":value.status==2?"Vắng":""}</td>
+                            
+               `
+               
+              });
+              htmlBody+='</tr>';
+              document.getElementById('listStuds').innerHTML = htmlBody;
+              console.log(htmlBody);
+            }
+            
+
+          });
+      }
+
+      function updateResults() {}
+
+      $(document).ready(function () {
+        // renderNavBar('#navbar', 'webcam_face_detection')
+        initFaceDetectionControls()
+        run()
+      })
+</script>
+    <script src="assets\js\vendor.min.js"></script>  -->
+
+  <!-- third party js -->
+  <script src="assets\libs\datatables\jquery.dataTables.min.js"></script>
+  <script src="assets\libs\datatables\dataTables.bootstrap4.js"></script>
+  <script src="assets\libs\datatables\dataTables.responsive.min.js"></script>
+  <script src="assets\libs\datatables\responsive.bootstrap4.min.js"></script>
+  <script src="assets\libs\datatables\dataTables.buttons.min.js"></script>
+  <script src="assets\libs\datatables\buttons.bootstrap4.min.js"></script>
+  <script src="assets\libs\datatables\buttons.html5.min.js"></script>
+  <script src="assets\libs\datatables\buttons.flash.min.js"></script>
+  <script src="assets\libs\datatables\buttons.print.min.js"></script>
+  <script src="assets\libs\datatables\dataTables.keyTable.min.js"></script>
+  <script src="assets\libs\datatables\dataTables.select.min.js"></script>
+  <script src="assets\libs\pdfmake\pdfmake.min.js"></script>
+  <script src="assets\libs\pdfmake\vfs_fonts.js"></script>
+  <!-- third party js ends -->
+
+  <!-- Datatables init -->
+  <script src="assets\js\pages\datatables.init.js"></script>
+
+  <!-- App js -->
+   <!-- <script src="assets\js\app.min.js"></script> </body> -->
+
+</html>
